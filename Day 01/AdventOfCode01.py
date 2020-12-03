@@ -11,8 +11,8 @@ For the first loop, if the number of that iteration is one of the three values,
 I look for two other values that add up to what is missing for 2020.
 If the three values are in the list, the three are multiplied together.
 '''
-
-values = [int(i) for i in (open('inputDay01.txt', 'r').readlines())]
+inputfile = open('inputDay01.txt', 'r')
+values = [int(i) for i in inputfile.readlines()]
 #PART1
 def aoc01(numbers, value):
     for x in numbers:
@@ -33,3 +33,5 @@ def aoc02(numbers, value):
 
 print("Part1:",aoc01(values,2020))
 print("Part2:",aoc02(values,2020))
+
+inputfile.close()

@@ -19,8 +19,8 @@ Other occurrences of the letter are irrelevant.
 
 To check if the character is exactly in one of the positions, I used the bitwise operation (XOR)
 '''
-
-inputlist = [i.split() for i in open('inputDay02.txt', 'r').readlines()]
+inputfile = open('inputDay02.txt', 'r')
+inputlist = [i.split() for i in inputfile.readlines()]
 
 def createrangelist(data):
     rangelst = [i[0] for i in data]
@@ -64,3 +64,5 @@ passwords = createpasswordlist(inputlist)
 
 print("Part 1:",counter(rangelist,letters,passwords))
 print("Part 2:",newcounter(rangelist,letters,passwords))
+
+inputfile.close()
