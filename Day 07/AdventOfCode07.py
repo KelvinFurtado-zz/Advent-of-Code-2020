@@ -28,3 +28,5 @@ rules = dict([format_rule(rule) for rule in rules])
 
 print("Part 1:",sum(search_shiny_gold(i,rules) for i in rules if i != "shiny gold"))
 print("Part 2:",inside_shiny_gold("shiny gold", rules) - 1)
+
+inputfile.close()

@@ -1,26 +1,3 @@
-'''
-Part 1: From your starting position at the top-left, check the position that is right 3 and down 1.
-Then, check the position that is right 3 and down 1 from there, and so on until you go past the bottom of the map.
-
-Finding a "." replace with "O". And finding a "#" replace it with "X".
-At the end, count how many "X" are on the map.
-
-In Python, strings are immutable, but the "replace char" function bypass this.
-This function takes a string, turns it into a list,
-changes the character at the given position and returns to a string.
-
-To prevent interactions from getting out of reach,
-the "update map" function increases the number of columns needed to reach the end of the map.
-
-The mapper function checks positions 3 right and 1 down,
-replacing "." by "O" and "#" by "X" and counting all "X" that have been placed.
-
-Part 2:
-Before using any of the following slopes, a new map is created and updated based on the down and right offsets.
-And then the mapping happens and the total "X" found is stored so that all of them are multiplied at the end.
-
-'''
-
 inputfile = open('inputDay03.txt', 'r')
 grid = [i.rstrip('\n') for i in inputfile.readlines()]
 

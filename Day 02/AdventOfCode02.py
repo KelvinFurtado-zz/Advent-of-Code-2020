@@ -1,24 +1,3 @@
-'''
-Part 1: From a list containing in each line a range, a character and a string,
-check how many strings are valid.
-For the string to be valid, the number of occurrences of the character must be in the range.
-
-First of all, you need to fit the data.
-The "create range list" returns a list of tuples containing the range in int type numbers.
-The "create letter list" returns a list with just the characters to be searched for each line.
-The "create password list" returns a list with all the passwords.
-
-the function checks if the number of occurrences of the character is within the range for each password.
-If so, it increments a valid password counter.
-
-
-Part 2: With the same list, check how many strings are valid according to the new policy.
-The numbers are now the exact positions of the character in the password.
-Exactly one of these positions must contain the given letter.
-Other occurrences of the letter are irrelevant.
-
-To check if the character is exactly in one of the positions, I used the bitwise operation (XOR)
-'''
 inputfile = open('inputDay02.txt', 'r')
 inputlist = [i.split() for i in inputfile.readlines()]
 

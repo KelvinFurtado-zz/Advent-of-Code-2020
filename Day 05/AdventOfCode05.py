@@ -1,12 +1,3 @@
-'''
-Part 1: Find the highest seat ID on a boarding pass
-seat = 8 letter string (first 5 = row, last 3 = column)
-Using binary search to find the seat row and column
-seat ID = row * 8 + column
-
-Part 2: Find the seat that is missing
-missing seat = All possible seats in range - all that exist
-'''
 inputfile = open('inputDay05.txt','r')
 seats = [i.rstrip('\n') for i in inputfile.readlines()]
 
